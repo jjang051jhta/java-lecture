@@ -9,9 +9,9 @@ public class Practice05 {
         int num03 = scanner.nextInt();  //10
         // 1 1 10
         // 수학의 8대 난제 3, 3, 3
-        if(  ((num01 + num02) < num03 ) ||
-             ((num01 + num03) < num02 ) ||
-             ((num02 + num03) < num01 )
+        if(  ((num01 + num02) <= num03 ) ||
+             ((num01 + num03) <= num02 ) ||
+             ((num02 + num03) <= num01 )
         ) {
             System.out.println("삼각형이 될 수 없습니다.");
         } else {
