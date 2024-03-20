@@ -4,10 +4,12 @@ import java.util.Scanner;
 public class Array02 {
     public static void main(String[] args) {
         int arr[] = new int[5];
+        int total = arr.length;
+        System.out.println("total==="+total);
         Scanner scanner = new Scanner(System.in);
         int max = 0;
         //10 , 5, 20
-        for(int i=0;i<5;i++){
+        for(int i=0;i<total;i++){
             int num = scanner.nextInt();
             arr[i] = num;
             if(arr[i] > max) {
