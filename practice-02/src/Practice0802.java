@@ -8,16 +8,15 @@ public class Practice0802 {
         int num = scanner.nextInt(); // 숫자 입력
         int arr[] = new int[num]; // 입력한 정수만큼 배열 생성
 
-        for ( int i = 0; i<num; i++) {
-            int ran = (int)(Math.random()*100+1);
-            arr[i] = ran;
-            // 안겹치게 하기 위해 검토
-            for (int j =0; j<=i; j++) {
-                while (arr[i] != arr[j]) {
-                    break;
-                }; // 겹치는 수가 나오면 안 겹칠 때까지 랜덤값 반복
+        for(int i=0; i<arr.length; i++) {
+            arr[i] = (int)(Math.random()*100+1); //1~100 랜덤 수 arr 입력
+            for(int j=0; j<i; j++) {
+                if(arr[j]==arr[i]) {
+                    i--;
+                }
             }
         }
+
         System.out.println(Arrays.toString(arr));
     }
 }
