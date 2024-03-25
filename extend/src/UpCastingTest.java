@@ -46,6 +46,10 @@ public class UpCastingTest {
         Person person = student; // upcasting
         Sawooggang sawooggang = new Sawooggang();
         Oreo oreo = new Oreo();
-        person.eat(oreo);
+        PotatoChip potatoChip = new PotatoChip();
+        Person person02 = new Person();
+        Student student02 = (Student)person02;
+        student02.grade="3";
+        student02.department = "컴터";
     }
 }
