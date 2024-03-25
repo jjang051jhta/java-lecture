@@ -17,6 +17,7 @@ public class StringStackTest {
             boolean over = stringStack.push(str);
             if(over==false) {
                 System.out.println("더 이상 입력 불가능");
+                break;
             }
         }
 //        System.out.println("==="+stringStack.length());
