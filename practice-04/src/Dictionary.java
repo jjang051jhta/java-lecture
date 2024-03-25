@@ -60,15 +60,29 @@ public class Dictionary extends PairMap {
 
     @Override
     String delete(String key) {
-        for (int i=0; i<count; i++) {
-            if(key.equals(keyArray[i])) {
-                keyArray[i] = null;
-                valueArray[i] = null;
-                count--;
+        int i = 0;
+        //발견됨
+        for (i = 0; i < count; i++) {
+            if (key.equals(keyArray[i])) {
+                break;
             }
         }
-        return null;
-
+        System.out.println("i==="+i);
+        //발견이 안됨,,,, 중복 안됨
+        if (i == count) {
+            return null;
+        }
+        //5 3개만 입력
+        for (int j = i; j < count - 1; j++) {
+            keyArray[j] = keyArray[j + 1];
+            valueArray[j] = valueArray[j + 1];
+        }
+        //0부터 시작하기 때문에....
+        count--;
+        keyArray[count] = null;
+        valueArray[count] = null;
+        return valueArray[i];
+        //한 칸앞으로 땡기기
     }
 
     @Override
