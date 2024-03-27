@@ -3,9 +3,13 @@ package randomgame;
 import java.util.Scanner;
 
 public class Game {
-    private Person playerList[] = new Person[2];
+    private Person playerList[];
     private Scanner scanner = new Scanner(System.in);
     public Game() {
+        this(2);
+    }
+    public Game(int num) {
+        playerList = new Person[num];
         for(int i=0;i< playerList.length;i++) {
             System.out.println(i+1+"번째 선수 입력");
             String name = scanner.nextLine();
