@@ -50,7 +50,11 @@ public class StringTest {
                     """;
         System.out.println(aaa);
 
-        //String 가변 객체
+        //StringBuffer 가변(mutable)   String 불변(immutable) 객체
+        String dd = "ddd";
+        System.out.println(dd.hashCode());
+        dd = "fff";
+        System.out.println(dd.hashCode());
         StringBuffer stringBuffer = new StringBuffer("abcd");
         System.out.println("stringBuffer.hashCode()==="+stringBuffer.hashCode());
         stringBuffer.append("efgh");
